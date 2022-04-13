@@ -10,6 +10,7 @@ import {
   Stack,
   Divider,
   Avatar,
+  Link,
 } from "@mui/material";
 import HeaderLogo from "../Assets/HeaderLogo.svg";
 import NotificationIcon from "../Assets/NotificationIcon.svg";
@@ -17,10 +18,13 @@ import HeaderProfilePic from "../Assets/HeaderProfilePic.png";
 const Header = () => {
   return (
     <AppBar position="static">
-      <Container fixed>
+      <Container fixed disableGutters>
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
-            <img src={HeaderLogo} alt="Logo" />
+            <Link href="/">
+              {" "}
+              <img src={HeaderLogo} alt="Logo" />
+            </Link>
           </Box>
           <Box>
             <Button variant="contained" color="primary">

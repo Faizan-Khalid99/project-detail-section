@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import { fontFamily } from "@mui/system";
 
 const defaultTheme = createTheme();
 
@@ -172,6 +171,20 @@ export const theme = createTheme({
           borderRadius: "23px",
           textTransform: "none",
           boxShadow: "none",
+        },
+        containedInfo: {
+          width: "211px",
+          height: "48px",
+          backgroundColor: colors.Solitude,
+          borderRadius: "78px",
+          textTransform: "none",
+          boxShadow: "none",
+          color: colors.slateGrey,
+          fontFamily: FONT_FAMILY.Oxygen,
+          "&:hover": {
+            backgroundColor: colors.Solitude,
+            color: colors.slateGrey,
+          },
         },
         outlinedSecondary: {
           width: "186px",
