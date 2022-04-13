@@ -17,7 +17,7 @@ import HeaderProfilePic from "../Assets/HeaderProfilePic.png";
 const Header = () => {
   return (
     <AppBar position="static">
-      <Container>
+      <Container fixed>
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
             <img src={HeaderLogo} alt="Logo" />

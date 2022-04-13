@@ -125,6 +125,17 @@ export const theme = createTheme({
             color: colors.white,
           },
         },
+        {
+          props: {
+            variant: "btnTextOutline",
+          },
+          style: {
+            fontSize: "12px",
+            lineHeight: "24px",
+            fontWeight: FONT_WEIGHT.bold,
+            fontFamily: FONT_FAMILY.Oxygen,
+          },
+        },
       ],
     },
     MuiContainer: {
@@ -159,6 +170,14 @@ export const theme = createTheme({
           padding: "9px 16px 8px 16px",
           borderRadius: "23px",
           textTransform: "none",
+        },
+        outlinedSecondary: {
+          width: "156px",
+          height: "32px",
+          padding: "4px 12px 4px 12px",
+          borderRadius: "61px",
+          textTransform: "none",
+          border: "rgba(0, 0, 0, 0.2) solid 1px",
         },
       },
     },
