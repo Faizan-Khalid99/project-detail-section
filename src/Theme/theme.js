@@ -100,8 +100,9 @@ export const theme = createTheme({
     },
     subtitle1: {
       fontSize: "0.75rem",
-      fontWeight: FONT_WEIGHT.bold,
+      fontWeight: FONT_WEIGHT.regular,
       lineHeight: "0.938rem",
+      color: colors.swamp,
     },
   },
 
@@ -170,9 +171,10 @@ export const theme = createTheme({
           padding: "9px 16px 8px 16px",
           borderRadius: "23px",
           textTransform: "none",
+          boxShadow: "none",
         },
         outlinedSecondary: {
-          width: "156px",
+          width: "186px",
           height: "32px",
           padding: "4px 12px 4px 12px",
           borderRadius: "61px",
