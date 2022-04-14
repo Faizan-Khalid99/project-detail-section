@@ -7,16 +7,65 @@ import {
   Stack,
   Link,
   Button,
+  LinearProgress,
+  styled,
 } from "@mui/material";
+import { FONT_WEIGHT, colors } from "../Theme/theme";
+
 import CeloIcon from "../Assets/CeloIcon.svg";
 import telegramIcon from "../Assets/telegramIcon.svg";
 import TwitterIcon from "../Assets/TwitterIcon.svg";
 import TwitterBookIcon from "../Assets/TwitterBookIcon.svg";
 import webIcon from "../Assets/webIcon.svg";
 import infoIcon from "../Assets/infoIcon.svg";
+const ProgressHeading = styled(Typography)({
+  fontWeight: FONT_WEIGHT.bold,
+  fontSize: "20px",
+  lineHeight: "150%",
+  color: colors.slateGrey,
+});
+
+const RaiseHeading = styled(Typography)({
+  fontWeight: FONT_WEIGHT.bold,
+  fontSize: "20px",
+  lineHeight: "150%",
+  color: colors.slateGrey,
+  marginTop: "27px",
+});
+const LaunchHeading = styled(Typography)({
+  fontWeight: FONT_WEIGHT.bold,
+  fontSize: "20px",
+  lineHeight: "150%",
+  color: colors.slateGrey,
+  marginTop: "24px",
+});
+const RemainingTime = styled(Typography)({
+  fontWeight: FONT_WEIGHT.bold,
+  fontSize: "20px",
+  lineHeight: "112.27%",
+  marginTop: "8px",
+  color: colors.swamp,
+});
+const StyledProgressBar = styled(LinearProgress)(({ theme }) => ({
+  width: "100px",
+  height: "8px",
+  borderRadius: "16px",
+  color: theme.palette.primary.main,
+  marginTop: "3px",
+  marginRight: "11px",
+}));
+const ProgressSection = styled(Box)({
+  border: "1px solid rgba(0, 0, 0, 0.1)",
+  width: "184px",
+  height: "250px",
+  borderRadius: "8px",
+  paddingTop: "24px",
+  paddingLeft: "24px",
+});
+
 const MainContent = () => {
   return (
-    <Box mt="40px">
+    <Box mt="40px" sx={{ borderBottom: "1px solid rgba(0, 0, 0, 0.12)" }}>
       <Container fixed>
         <Typography variant="h1" color="primary">
           Project{" "}
@@ -24,11 +73,11 @@ const MainContent = () => {
             Detail
           </Typography>
         </Typography>
-        <Grid mt="40px" container spacing={3}>
+        <Grid mt="40px" mb="40px" container spacing={6}>
           <Grid item md={1}>
             <img src={CeloIcon} alt="Celo Icon" />
           </Grid>
-          <Grid item md={7}>
+          <Grid item md={8}>
             <Box ml={3}>
               <Typography variant="h2" color="secondary">
                 Celo
@@ -39,16 +88,16 @@ const MainContent = () => {
                 phone numbers as public keys.{" "}
               </Typography>
               <Stack mt={3} direction="row" spacing={1}>
-                <Link>
+                <Link href="">
                   <img src={webIcon} alt="web" />{" "}
                 </Link>
-                <Link>
+                <Link href="">
                   <img src={telegramIcon} alt="telegramIcon" />{" "}
                 </Link>
-                <Link>
+                <Link href="">
                   <img src={TwitterIcon} alt="TwitterIcon" />{" "}
                 </Link>
-                <Link>
+                <Link href="">
                   <img src={TwitterBookIcon} alt="TwitterBook" />{" "}
                 </Link>
               </Stack>
@@ -56,17 +105,36 @@ const MainContent = () => {
                 <Button variant="contained" color="info">
                   Get Whitelisted
                 </Button>
-
                 <img src={infoIcon} alt="infoIcon" />
-                <Typography variant="body2" component="span">
-                  {" "}
+                <Typography variant="body1" component="span">
                   Please connect your wallet.
                 </Typography>
               </Box>
             </Box>
           </Grid>
-          <Grid item md={4}>
-            To be made...
+          <Grid item md={3}>
+            <ProgressSection>
+              <ProgressHeading>Progress</ProgressHeading>
+
+              <Box sx={{ display: " inline-flex" }}>
+                <StyledProgressBar variant="determinate" value={55} />
+                <Typography
+                  variant="subtitle1"
+                  color="secondary"
+                  component="span"
+                >
+                  55%
+                </Typography>
+              </Box>
+              <Box mt={3}>
+                <RaiseHeading>Total Raise</RaiseHeading>
+                <Typography variant="h4" color="primary">
+                  $324
+                </Typography>
+                <LaunchHeading>Launching</LaunchHeading>
+                <RemainingTime>1D 12H 35M</RemainingTime>
+              </Box>
+            </ProgressSection>
           </Grid>
         </Grid>
       </Container>

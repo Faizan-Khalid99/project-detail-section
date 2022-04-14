@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+import { borderRadius } from "@mui/system";
 
 const defaultTheme = createTheme();
 
@@ -39,6 +40,9 @@ export const theme = createTheme({
     },
     darkBgText: {
       main: colors.white,
+    },
+    dark: {
+      main: colors.swamp,
     },
   },
   spacing: 8,
@@ -163,6 +167,23 @@ export const theme = createTheme({
       },
     },
     MuiButton: {
+      variants: [
+        {
+          props: {
+            variant: "disabled",
+          },
+          style: {
+            backgroundColor: colors.white,
+            color: colors.slateGrey,
+            border: "1px solid rgba(0, 0, 0, 0.1)",
+            textTransform: "none",
+            fontSize: "16px",
+            fontWeight: FONT_WEIGHT.bold,
+            lineHeight: "24px",
+            borderRadius: "36px",
+          },
+        },
+      ],
       styleOverrides: {
         containedPrimary: {
           width: "121px",
@@ -186,6 +207,18 @@ export const theme = createTheme({
             color: colors.slateGrey,
           },
         },
+        containedDark: {
+          borderRadius: "36px",
+          padding: "12px 24px",
+          textTransform: "none",
+          fontWeight: FONT_WEIGHT.bold,
+          fontSize: "16px",
+          lineHeight: "24px",
+          color: colors.white,
+          width: "90px",
+          height: "48px",
+          borderRadius: "36px",
+        },
         outlinedSecondary: {
           width: "186px",
           height: "32px",
@@ -200,6 +233,18 @@ export const theme = createTheme({
       "& .MuiAvatar-img": {
         width: "40px",
         height: "60px",
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          width: "166px",
+          height: "223px",
+          borderRadius: "24px",
+          border: "1px solid rgba(17, 48, 45, 0.1)",
+          background: colors.white,
+          boxShadow: "none",
+        },
       },
     },
   },
