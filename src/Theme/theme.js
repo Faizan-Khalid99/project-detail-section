@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import { borderRadius } from "@mui/system";
 
 const defaultTheme = createTheme();
 
@@ -217,7 +216,6 @@ export const theme = createTheme({
           color: colors.white,
           width: "90px",
           height: "48px",
-          borderRadius: "36px",
         },
         outlinedSecondary: {
           width: "186px",

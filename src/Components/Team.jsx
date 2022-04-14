@@ -21,6 +21,13 @@ import Allison from "../Assets/Allison.png";
 import Jaylon from "../Assets/Jaylon.png";
 import Davis from "../Assets/Davis.png";
 import Carter from "../Assets/Carter.png";
+import Carter2 from "../Assets/Carter2.png";
+import Leo from "../Assets/Leo.png";
+import Gustavo from "../Assets/Gustavo.png";
+import Kianna from "../Assets/Kianna.png";
+import Marilyn from "../Assets/Marilyn.png";
+import Corey from "../Assets/Corey.png";
+
 const ButtonSection = styled(Box)({
   marginTop: "52px",
 });
@@ -65,7 +72,7 @@ const Team = () => {
         </Typography>
       </TeamHeading>
       <TeamMemberSection>
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" spacing={1.5}>
           <Card>
             <CustomAvatar alt="Mahesh" src={Mahesh} />
             <CardContent>
@@ -145,10 +152,10 @@ const Team = () => {
             </CardContent>
           </Card>
           <Card>
-            <CustomAvatar alt="Mahesh" src={Mahesh} />
+            <CustomAvatar alt="Jaylon" src={Jaylon} />
             <CardContent>
               <Typography gutterBottom align="center" variant="h6">
-                Mahesh Harilela
+                Jaylon Press
                 <Designation align="center" color="primary">
                   Chairman
                 </Designation>
@@ -171,12 +178,12 @@ const Team = () => {
             </CardContent>
           </Card>
           <Card>
-            <CustomAvatar alt="Mahesh" src={Mahesh} />
+            <CustomAvatar alt="Davis" src={Davis} />
             <CardContent>
               <Typography gutterBottom align="center" variant="h6">
-                Mahesh Harilela
+                Davis Saris
                 <Designation align="center" color="primary">
-                  Chairman
+                  lorem ipsum
                 </Designation>
               </Typography>
               <Stack
@@ -197,12 +204,170 @@ const Team = () => {
             </CardContent>
           </Card>
           <Card>
-            <CustomAvatar alt="Mahesh" src={Mahesh} />
+            <CustomAvatar alt="Carter" src={Carter} />
             <CardContent>
               <Typography gutterBottom align="center" variant="h6">
-                Mahesh Harilela
+                Carter Botosh
                 <Designation align="center" color="primary">
-                  Chairman
+                  Lorem Ipsum
+                </Designation>
+              </Typography>
+              <Stack
+                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                direction="row"
+                spacing={2}
+              >
+                <Link href="">
+                  <img src={TwitterCardIcon} alt="twitter" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={LinkedInCardIcon} alt="Linkedin" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={FacebookCardIcon} alt="Faceboom" />{" "}
+                </Link>
+              </Stack>
+            </CardContent>
+          </Card>
+        </Stack>
+        <Stack mt="32px" direction="row" spacing={1.5}>
+          <Card>
+            <CustomAvatar alt="Leo" src={Leo} />
+            <CardContent>
+              <Typography gutterBottom align="center" variant="h6">
+                Leo Franci
+                <Designation align="center" color="primary">
+                  Advisor
+                </Designation>
+              </Typography>
+              <Stack
+                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                direction="row"
+                spacing={2}
+              >
+                <Link href="">
+                  <img src={TwitterCardIcon} alt="twitter" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={LinkedInCardIcon} alt="Linkedin" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={FacebookCardIcon} alt="Faceboom" />{" "}
+                </Link>
+              </Stack>
+            </CardContent>
+          </Card>
+          <Card>
+            <CustomAvatar alt="Gus" src={Gustavo} />
+            <CardContent>
+              <Typography gutterBottom align="center" variant="h6">
+                Gustavo Carder
+                <Designation align="center" color="primary">
+                  Advisor
+                </Designation>
+              </Typography>
+              <Stack
+                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                direction="row"
+                spacing={2}
+              >
+                <Link href="">
+                  <img src={TwitterCardIcon} alt="twitter" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={LinkedInCardIcon} alt="Linkedin" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={FacebookCardIcon} alt="Faceboom" />{" "}
+                </Link>
+              </Stack>
+            </CardContent>
+          </Card>
+          <Card>
+            <CustomAvatar alt="Kianna" src={Kianna} />
+            <CardContent>
+              <Typography gutterBottom align="center" variant="h6">
+                Kianna Lipshutz
+                <Designation align="center" color="primary">
+                  Advisor
+                </Designation>
+              </Typography>
+              <Stack
+                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                direction="row"
+                spacing={2}
+              >
+                <Link href="">
+                  <img src={TwitterCardIcon} alt="twitter" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={LinkedInCardIcon} alt="Linkedin" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={FacebookCardIcon} alt="Faceboom" />{" "}
+                </Link>
+              </Stack>
+            </CardContent>
+          </Card>
+          <Card>
+            <CustomAvatar alt="Marilyn" src={Marilyn} />
+            <CardContent>
+              <Typography gutterBottom align="center" variant="h6">
+                Marilyn Culhane
+                <Designation align="center" color="primary">
+                  Advisor
+                </Designation>
+              </Typography>
+              <Stack
+                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                direction="row"
+                spacing={2}
+              >
+                <Link href="">
+                  <img src={TwitterCardIcon} alt="twitter" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={LinkedInCardIcon} alt="Linkedin" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={FacebookCardIcon} alt="Faceboom" />{" "}
+                </Link>
+              </Stack>
+            </CardContent>
+          </Card>
+          <Card>
+            <CustomAvatar alt="Corey" src={Corey} />
+            <CardContent>
+              <Typography gutterBottom align="center" variant="h6">
+                Corey Donin
+                <Designation align="center" color="primary">
+                  Advisor
+                </Designation>
+              </Typography>
+              <Stack
+                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                direction="row"
+                spacing={2}
+              >
+                <Link href="">
+                  <img src={TwitterCardIcon} alt="twitter" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={LinkedInCardIcon} alt="Linkedin" />{" "}
+                </Link>
+                <Link href="">
+                  <img src={FacebookCardIcon} alt="Faceboom" />{" "}
+                </Link>
+              </Stack>
+            </CardContent>
+          </Card>
+          <Card>
+            <CustomAvatar alt="Carter2" src={Carter2} />
+            <CardContent>
+              <Typography gutterBottom align="center" variant="h6">
+                Carter Botosh
+                <Designation align="center" color="primary">
+                  Advisor
                 </Designation>
               </Typography>
               <Stack
