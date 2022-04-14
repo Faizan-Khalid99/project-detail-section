@@ -105,7 +105,7 @@ const Team = () => {
               <Typography gutterBottom align="center" variant="h6">
                 Ryan Ekstrom
                 <Designation align="center" color="primary">
-                  lorem ipsum
+                  Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack
@@ -131,7 +131,7 @@ const Team = () => {
               <Typography gutterBottom align="center" variant="h6">
                 Allison Philips
                 <Designation align="center" color="primary">
-                  lorem ipsum
+                  Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack
@@ -157,7 +157,7 @@ const Team = () => {
               <Typography gutterBottom align="center" variant="h6">
                 Jaylon Press
                 <Designation align="center" color="primary">
-                  Chairman
+                  Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack
@@ -183,7 +183,7 @@ const Team = () => {
               <Typography gutterBottom align="center" variant="h6">
                 Davis Saris
                 <Designation align="center" color="primary">
-                  lorem ipsum
+                  Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack

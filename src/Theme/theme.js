@@ -27,6 +27,7 @@ export const colors = {
   white: "#FFFFFF",
   darkSlate: "#415957",
   loss: "#EC4949 ",
+  footer: "#163D53",
 };
 
 export const theme = createTheme({
@@ -42,6 +43,8 @@ export const theme = createTheme({
     },
     dark: {
       main: colors.swamp,
+      contrastText: colors.white,
+      footer: colors.footer,
     },
   },
   spacing: 8,
@@ -242,6 +245,38 @@ export const theme = createTheme({
           border: "1px solid rgba(17, 48, 45, 0.1)",
           background: colors.white,
           boxShadow: "none",
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          borderRadius: "4px",
+          padding: "12px, 16px",
+          width: "234px",
+          height: "48px",
+          color: colors.white,
+          "&:focused": {
+            color: colors.white,
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          color: colors.white,
+          border: "0.1px solid #2a4e62",
+          "&::placeholder": {
+            color: colors.white,
+          },
+        },
+
+        "&:focus": {
+          border: "1px solid #2a4e62",
+        },
+        "&:hover": {
+          border: "0.1px solid #2a4e62",
         },
       },
     },
