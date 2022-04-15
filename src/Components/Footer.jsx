@@ -7,16 +7,26 @@ import {
   TextField,
   Link,
   InputAdornment,
-  InputLabelProps,
   Box,
+  Stack,
 } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { FONT_WEIGHT } from "../Theme/theme";
 import FooterLogo from "../Assets/FooterLogo.svg";
+import twitterIcon from "../Assets/twitterfooter.svg";
+import discordIcon from "../Assets/discordfooter.svg";
+import facebookIcon from "../Assets/facebookFooter.svg";
+import instagramIcon from "../Assets/instagramfooter.svg";
+import linkedinIcon from "../Assets/linkedInFooter.svg";
+import telegramIcon from "../Assets/telegramFooter.svg";
+import tiktokIcon from "../Assets/tiktokIcon.svg";
+import youtubeIcon from "../Assets/youtubefooter.png";
+import MIcon from "../Assets/M-Footer.svg";
 const AppFooter = styled("div")(({ theme }) => ({
   background: theme.palette.dark.footer,
   color: theme.palette.dark.contrastText,
   padding: "61px",
+  paddingBottom: "20px",
   marginTop: "89px",
 }));
 const FooterHeading = styled(Typography)(({ theme }) => ({
@@ -32,6 +42,17 @@ const CustomLink = styled(Link)({
   opacity: "0.8",
   marginBottom: "12px",
 });
+const BorderFooter = styled("div")({
+  border: "1px solid rgba(255,255,255,0.1)",
+  marginTop: "56px",
+  paddingLeft: 0,
+  paddingRight: 0,
+});
+const PageEnd = styled(Typography)(({ theme }) => ({
+  color: theme.palette.dark.contrastText,
+  marginTop: "20px",
+}));
+
 const Footer = () => {
   return (
     <AppFooter>
@@ -52,7 +73,7 @@ const Footer = () => {
               <Typography variant="body2" gutterBottom>
                 <CustomLink href="/">Private Sales</CustomLink>
               </Typography>
-              <Typography variant="body2" gutterBottom>
+              <Typography variant="body2">
                 <CustomLink href="/">Submit your Project</CustomLink>
               </Typography>
             </Box>
@@ -63,9 +84,6 @@ const Footer = () => {
               <FooterHeading gutterBottom>Help</FooterHeading>
               <Typography variant="body2" gutterBottom>
                 <CustomLink href="/">Support</CustomLink>
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                <CustomLink href="/">About</CustomLink>
               </Typography>
               <Typography variant="body2" gutterBottom>
                 <CustomLink href="/">Privacy Policy</CustomLink>
@@ -82,12 +100,8 @@ const Footer = () => {
           <Grid item md={3} sm={12}>
             <FooterHeading gutterBottom>Subscribe</FooterHeading>
             <TextField
+              sx={{ marginTop: "16px" }}
               variant="outlined"
-              sx={{
-                "& label": {
-                  color: "#fff",
-                },
-              }}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -95,11 +109,45 @@ const Footer = () => {
                   </InputAdornment>
                 ),
               }}
+              color="darkBgText"
               label="Enter Email"
             />
+            <Stack direction="row" mt={4} spacing={1.5}>
+              <Link href="/">
+                <img src={telegramIcon} alt="telegram" />
+              </Link>
+              <Link href="/">
+                <img src={twitterIcon} alt="twitter" />
+              </Link>
+              <Link href="/">
+                <img src={MIcon} alt="M" />
+              </Link>
+              <Link href="/">
+                <img src={youtubeIcon} alt="youtube" />
+              </Link>
+              <Link href="/">
+                <img src={discordIcon} alt="discord" />
+              </Link>
+              <Link href="/">
+                <img src={instagramIcon} alt="instagram" />
+              </Link>
+              <Link href="/">
+                <img src={linkedinIcon} alt="linkedin" />
+              </Link>
+              <Link href="/">
+                <img src={facebookIcon} alt="fb" />
+              </Link>
+              <Link href="/">
+                <img src={tiktokIcon} alt="tiktok" />
+              </Link>
+            </Stack>
           </Grid>
         </Grid>
       </Container>
+      <BorderFooter />
+      <PageEnd variant="subtitle1" align="center">
+        © GAINS Associates
+      </PageEnd>
     </AppFooter>
   );
 };

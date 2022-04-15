@@ -256,9 +256,16 @@ export const theme = createTheme({
           width: "234px",
           height: "48px",
           color: colors.white,
-          "&:focused": {
-            color: colors.white,
+          "& label": {
+            color: "#fff",
           },
+        },
+      },
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          color: colors.white,
         },
       },
     },
@@ -270,11 +277,11 @@ export const theme = createTheme({
           "&::placeholder": {
             color: colors.white,
           },
+          "&:focus": {
+            border: "1px solid #2a4e62",
+          },
         },
 
-        "&:focus": {
-          border: "1px solid #2a4e62",
-        },
         "&:hover": {
           border: "0.1px solid #2a4e62",
         },
