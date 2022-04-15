@@ -157,6 +157,7 @@ export const theme = createTheme({
           backgroundColor: colors.white,
           boxShadow: "none",
           borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
+          paddingTop: "10px",
         },
       },
     },
@@ -273,16 +274,16 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           color: colors.white,
-          border: "0.1px solid #2a4e62",
+          border: "1px solid #2a4e62",
           "&::placeholder": {
             color: colors.white,
           },
-          "&:focus": {
+          "&::focus": {
             border: "1px solid #2a4e62",
           },
         },
 
-        "&:hover": {
+        "&::hover": {
           border: "0.1px solid #2a4e62",
         },
       },

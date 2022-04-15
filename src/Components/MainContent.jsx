@@ -101,12 +101,23 @@ const MainContent = () => {
                   <img src={TwitterBookIcon} alt="TwitterBook" />{" "}
                 </Link>
               </Stack>
-              <Box mt={6.75}>
-                <Button variant="contained" color="info">
+              <Box mt={6.75} sx={{ display: "inline-flex" }}>
+                <Button
+                  variant="contained"
+                  color="info"
+                  sx={{
+                    marginRight: "28px",
+                  }}
+                >
                   Get Whitelisted
                 </Button>
+
                 <img src={infoIcon} alt="infoIcon" />
-                <Typography variant="body1" component="span">
+                <Typography
+                  sx={{ marginTop: "11px", marginLeft: "12px" }}
+                  variant="body1"
+                  component="span"
+                >
                   Please connect your wallet.
                 </Typography>
               </Box>

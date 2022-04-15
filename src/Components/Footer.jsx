@@ -74,7 +74,7 @@ const Footer = () => {
                 <CustomLink href="/">Private Sales</CustomLink>
               </Typography>
               <Typography variant="body2">
-                <CustomLink href="/">Submit your Project</CustomLink>
+                <CustomLink href="/">Submit Project</CustomLink>
               </Typography>
             </Box>
           </Grid>
