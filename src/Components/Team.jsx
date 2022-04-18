@@ -39,6 +39,7 @@ const TeamMemberSection = styled(Box)({
   borderRadius: "20px",
   padding: "40px",
   marginTop: "32px",
+  width: "fit-content",
 });
 const CustomAvatar = styled(Avatar)({
   width: "80px",

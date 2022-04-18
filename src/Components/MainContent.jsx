@@ -44,6 +44,7 @@ const RemainingTime = styled(Typography)({
   fontSize: "20px",
   lineHeight: "112.27%",
   marginTop: "8px",
+  paddingBottom: "24px",
   color: colors.swamp,
 });
 const StyledProgressBar = styled(LinearProgress)(({ theme }) => ({

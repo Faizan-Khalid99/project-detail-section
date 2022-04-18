@@ -93,6 +93,11 @@ export const theme = createTheme({
       lineHeight: "1.5rem",
     },
     body1: {
+      [defaultTheme.breakpoints.down("md")]: {
+        "& br": {
+          display: "none",
+        },
+      },
       fontSize: "1rem",
       fontWeight: FONT_WEIGHT.regular,
       lineHeight: "1.5rem",
@@ -195,6 +200,9 @@ export const theme = createTheme({
           borderRadius: "23px",
           textTransform: "none",
           boxShadow: "none",
+          [defaultTheme.breakpoints.down("md")]: {
+            display: "none",
+          },
         },
         containedInfo: {
           width: "211px",

@@ -11,15 +11,27 @@ import {
   Divider,
   Avatar,
   Link,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import HeaderLogo from "../Assets/HeaderLogo.svg";
 import NotificationIcon from "../Assets/NotificationIcon.svg";
 import HeaderProfilePic from "../Assets/HeaderProfilePic.png";
+import MenuIcon from "../Assets/MenuIcon.svg";
 const Header = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <AppBar position="static">
-      <Container fixed disableGutters>
+      <Container fixed disableGutters={isMobile ? false : true}>
         <Toolbar>
+          {isMobile && (
+            <Box mb="10px" mr={2.5}>
+              <IconButton>
+                <img src={MenuIcon} alt="menu" />
+              </IconButton>
+            </Box>
+          )}
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/">
               {" "}
@@ -33,17 +45,21 @@ const Header = () => {
           </Box>
           <Stack
             direction="row"
-            divider={<Divider orientation="vertical" flexItem />}
-            spacing={2}
+            divider={isMobile ? 0 : <Divider orientation="vertical" flexItem />}
+            spacing={isMobile ? 0.5 : 2}
           >
             <Box>
               <IconButton sx={{ marginLeft: "40px", marginTop: "0px" }}>
                 <img src={NotificationIcon} alt="Notification" />
               </IconButton>
             </Box>
-            <Box sx={{ paddingTop: "10px" }}>
-              <Typography variant="h6">Alexandre</Typography>
-            </Box>
+            {isMobile ? (
+              <Box></Box>
+            ) : (
+              <Box sx={{ paddingTop: "10px" }}>
+                <Typography variant="h6">Alexandre</Typography>
+              </Box>
+            )}
           </Stack>
           <Box sx={{ marginLeft: "10px" }}>
             <Avatar alt="profile pic" src={HeaderProfilePic} />
