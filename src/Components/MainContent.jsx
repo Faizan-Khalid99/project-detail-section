@@ -58,10 +58,9 @@ const StyledProgressBar = styled(LinearProgress)(({ theme }) => ({
 const ProgressSection = styled(Box)({
   border: "1px solid rgba(0, 0, 0, 0.1)",
   width: "184px",
-  height: "250px",
+  height: "270px",
   borderRadius: "8px",
-  paddingTop: "24px",
-  paddingLeft: "24px",
+  padding: "24px",
 });
 
 const MainContent = () => {
@@ -143,8 +142,10 @@ const MainContent = () => {
                 <Typography variant="h4" color="primary">
                   $324
                 </Typography>
-                <LaunchHeading>Launching</LaunchHeading>
-                <RemainingTime>1D 12H 35M</RemainingTime>
+                <Box mt={3}>
+                  <LaunchHeading>Launching</LaunchHeading>
+                  <RemainingTime>1D 12H 35M</RemainingTime>
+                </Box>
               </Box>
             </ProgressSection>
           </Grid>

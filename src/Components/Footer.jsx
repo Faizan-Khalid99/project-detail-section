@@ -60,13 +60,13 @@ const Footer = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <AppFooter>
-      <Container fixed>
+      <Container disableGutters={isMobile ? true : false} fixed>
         <Grid container spacing={2}>
           <Grid item lg={2} md={3} sm={12} xs={12}>
             <img src={FooterLogo} alt="Footer Logo" />
           </Grid>
           <Grid item lg={2} md={2} sm={4} xs={6}>
-            <Box ml={10}>
+            <Box ml={isMobile ? 0 : 10}>
               <FooterHeading gutterBottom>Company</FooterHeading>
               <Typography variant="body2" gutterBottom>
                 <CustomLink href="/">Careers</CustomLink>
@@ -83,8 +83,8 @@ const Footer = () => {
             </Box>
           </Grid>
           <Grid item lg={1} md={1} sm={4}></Grid>
-          <Grid item lg={2} md={2} sm={4} xs={12}>
-            <Box ml={10}>
+          <Grid item lg={2} md={2} sm={4} xs={6}>
+            <Box ml={isMobile ? 0 : 10}>
               <FooterHeading gutterBottom>Help</FooterHeading>
               <Typography variant="body2" gutterBottom>
                 <CustomLink href="/">Support</CustomLink>
@@ -101,9 +101,8 @@ const Footer = () => {
             </Box>
           </Grid>
           <Grid item lg={2} md={1} sm={4} xs={12}></Grid>
-          <Grid item md={3} sm={12} ml={isMobile ? 2 : 0}>
+          <Grid item md={3} sm={6} ml={0}>
             <FooterHeading gutterBottom>Subscribe</FooterHeading>
-
             <TextField
               sx={{ marginTop: "16px" }}
               variant="outlined"

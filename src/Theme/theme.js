@@ -236,6 +236,10 @@ export const theme = createTheme({
           borderRadius: "61px",
           textTransform: "none",
           border: "rgba(0, 0, 0, 0.2) solid 1px",
+          [defaultTheme.breakpoints.down("md")]: {
+            height: "70px",
+            borderRadius: "12px",
+          },
         },
       },
     },
