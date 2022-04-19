@@ -1,9 +1,18 @@
 import React from "react";
-import { Container, Button, Box, Typography } from "@mui/material";
+import {
+  Container,
+  Button,
+  Box,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { Stepper, Step } from "react-mui-stepper";
 import WarningIcon from "../Assets/WarningIcon.svg";
 import "./stepper.css";
 const SubHeader = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery("md");
   return (
     <Box component="div" sx={{ borderBottom: "1px solid rgba(0, 0, 0, 0.12)" }}>
       <Container fixed maxWidth="md">

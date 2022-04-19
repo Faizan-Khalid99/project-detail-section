@@ -9,6 +9,8 @@ import {
   InputAdornment,
   Box,
   Stack,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { FONT_WEIGHT } from "../Theme/theme";
@@ -54,10 +56,12 @@ const PageEnd = styled(Typography)(({ theme }) => ({
 }));
 
 const Footer = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <AppFooter>
       <Container fixed>
-        <Grid container spacing={0}>
+        <Grid container spacing={2}>
           <Grid item lg={2} md={3} sm={12} xs={12}>
             <img src={FooterLogo} alt="Footer Logo" />
           </Grid>
@@ -79,7 +83,7 @@ const Footer = () => {
             </Box>
           </Grid>
           <Grid item lg={1} md={1} sm={4}></Grid>
-          <Grid item lg={2} md={2} sm={4} xs={6}>
+          <Grid item lg={2} md={2} sm={4} xs={12}>
             <Box ml={10}>
               <FooterHeading gutterBottom>Help</FooterHeading>
               <Typography variant="body2" gutterBottom>
@@ -97,8 +101,9 @@ const Footer = () => {
             </Box>
           </Grid>
           <Grid item lg={2} md={1} sm={4} xs={12}></Grid>
-          <Grid item md={3} sm={12}>
+          <Grid item md={3} sm={12} ml={isMobile ? 2 : 0}>
             <FooterHeading gutterBottom>Subscribe</FooterHeading>
+
             <TextField
               sx={{ marginTop: "16px" }}
               variant="outlined"
@@ -112,6 +117,7 @@ const Footer = () => {
               color="darkBgText"
               label="Enter Email"
             />
+
             <Stack direction="row" mt={4} spacing={1.5}>
               <Link href="/">
                 <img src={telegramIcon} alt="telegram" />
