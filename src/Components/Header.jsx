@@ -14,7 +14,8 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import HeaderLogo from "../Assets/HeaderLogo.svg";
+import { ReactComponent as HeaderLogo } from "../Assets/HeaderLogo.svg";
+// import HeaderLogo from "../Assets/HeaderLogo.svg";
 import NotificationIcon from "../Assets/NotificationIcon.svg";
 import HeaderProfilePic from "../Assets/HeaderProfilePic.png";
 import MenuIcon from "../Assets/MenuIcon.svg";
@@ -35,7 +36,7 @@ const Header = () => {
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/">
               {" "}
-              <img src={HeaderLogo} alt="Logo" />
+              <HeaderLogo />
             </Link>
           </Box>
           <Box>

@@ -11,6 +11,7 @@ const SubHeader = () => {
           sx={{
             display: "flex",
             marginTop: "24px",
+            overflow: "hidden",
           }}
         >
           <Button variant="outlined" color="secondary">

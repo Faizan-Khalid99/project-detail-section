@@ -10,6 +10,8 @@ import {
   Avatar,
   CardContent,
   Link,
+  createTheme,
+  useMediaQuery,
 } from "@mui/material";
 import { colors, FONT_WEIGHT } from "../Theme/theme";
 import TwitterCardIcon from "../Assets/TwitterCardIcon.svg";
@@ -27,7 +29,7 @@ import Gustavo from "../Assets/Gustavo.png";
 import Kianna from "../Assets/Kianna.png";
 import Marilyn from "../Assets/Marilyn.png";
 import Corey from "../Assets/Corey.png";
-
+const theme = createTheme();
 const ButtonSection = styled(Box)({
   marginTop: "52px",
 });
@@ -40,20 +42,34 @@ const TeamMemberSection = styled(Box)({
   padding: "40px",
   marginTop: "32px",
   width: "fit-content",
+  [theme.breakpoints.down("sm")]: {
+    width: "345px",
+  },
 });
 const CustomAvatar = styled(Avatar)({
   width: "80px",
   height: "76px",
   marginTop: "24px",
   marginLeft: "43px",
+  [theme.breakpoints.down("md")]: {
+    width: "23.39px",
+    height: "22.2px",
+    marginTop: "10px",
+    marginLeft: "12px",
+    marginBottom: "0px",
+  },
 });
 const Designation = styled(Typography)({
   fontWeight: FONT_WEIGHT.bold,
   fontSize: "12px",
   lineHeight: "15.15px",
   marginTop: "8px",
+  [theme.breakpoints.down("md")]: {
+    marginTop: "2px",
+  },
 });
 const Team = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Container fixed>
       <ButtonSection>
@@ -77,16 +93,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Mahesh" src={Mahesh} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Mahesh Harilela
                 <Designation align="center" color="primary">
                   Chairman
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -103,16 +124,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Ryan" src={Ryan} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Ryan Ekstrom
                 <Designation align="center" color="primary">
                   Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -129,16 +155,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Allison" src={Allison} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Allison Philips
                 <Designation align="center" color="primary">
                   Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -155,16 +186,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Jaylon" src={Jaylon} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Jaylon Press
                 <Designation align="center" color="primary">
                   Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -181,16 +217,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Davis" src={Davis} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Davis Saris
                 <Designation align="center" color="primary">
                   Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -207,16 +248,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Carter" src={Carter} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Carter Botosh
                 <Designation align="center" color="primary">
                   Lorem Ipsum
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -235,16 +281,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Leo" src={Leo} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Leo Franci
                 <Designation align="center" color="primary">
                   Advisor
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -261,16 +312,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Gus" src={Gustavo} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Gustavo Carder
                 <Designation align="center" color="primary">
                   Advisor
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -287,16 +343,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Kianna" src={Kianna} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Kianna Lipshutz
                 <Designation align="center" color="primary">
                   Advisor
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -313,16 +374,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Marilyn" src={Marilyn} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Marilyn Culhane
                 <Designation align="center" color="primary">
                   Advisor
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -339,16 +405,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Corey" src={Corey} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Corey Donin
                 <Designation align="center" color="primary">
                   Advisor
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -365,16 +436,21 @@ const Team = () => {
           <Card>
             <CustomAvatar alt="Carter2" src={Carter2} />
             <CardContent>
-              <Typography gutterBottom align="center" variant="h6">
+              <Typography
+                gutterBottom={isMobile ? false : true}
+                align="center"
+                variant="h6"
+              >
                 Carter Botosh
                 <Designation align="center" color="primary">
                   Advisor
                 </Designation>
               </Typography>
               <Stack
-                sx={{ marginTop: 2, display: "flex", justifyContent: "center" }}
+                sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
-                spacing={2}
+                spacing={isMobile ? 1 : 2}
+                mt={isMobile ? 0 : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}

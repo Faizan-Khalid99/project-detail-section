@@ -91,6 +91,9 @@ export const theme = createTheme({
       fontSize: "1rem",
       fontWeight: FONT_WEIGHT.bold,
       lineHeight: "1.5rem",
+      [defaultTheme.breakpoints.down("md")]: {
+        fontSize: "0.2rem",
+      },
     },
     body1: {
       [defaultTheme.breakpoints.down("md")]: {
@@ -258,9 +261,28 @@ export const theme = createTheme({
           border: "1px solid rgba(17, 48, 45, 0.1)",
           background: colors.white,
           boxShadow: "none",
+          [defaultTheme.breakpoints.down("md")]: {
+            width: "48.53px",
+            height: "89.15px",
+          },
         },
       },
     },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          [defaultTheme.breakpoints.down("md")]: {
+            padding: "0px",
+            "& .MuiTypography-body1": {
+              fontSize: "2.5px",
+              lineHeight: "1px",
+              marginTop: 0,
+            },
+          },
+        },
+      },
+    },
+
     MuiTextField: {
       styleOverrides: {
         root: {
@@ -297,6 +319,18 @@ export const theme = createTheme({
 
         "&::hover": {
           border: "0.1px solid #2a4e62",
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          "& img": {
+            [defaultTheme.breakpoints.down("md")]: {
+              width: "3.51px",
+              height: "3.51px",
+            },
+          },
         },
       },
     },
