@@ -92,7 +92,7 @@ export const theme = createTheme({
       fontWeight: FONT_WEIGHT.bold,
       lineHeight: "1.5rem",
       [defaultTheme.breakpoints.down("md")]: {
-        fontSize: "0.2rem",
+        fontSize: "0.3rem",
       },
     },
     body1: {
@@ -262,8 +262,9 @@ export const theme = createTheme({
           background: colors.white,
           boxShadow: "none",
           [defaultTheme.breakpoints.down("md")]: {
-            width: "48.53px",
+            width: "52.53px",
             height: "80.15px",
+            borderRadius: "12px",
           },
         },
       },
@@ -274,8 +275,8 @@ export const theme = createTheme({
           [defaultTheme.breakpoints.down("md")]: {
             padding: "0px",
             "& .MuiTypography-body1": {
-              fontSize: "2.5px",
-              lineHeight: "1px",
+              fontSize: "4.5px",
+              lineHeight: "1.5px",
               marginTop: 0,
             },
           },

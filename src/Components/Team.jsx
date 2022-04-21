@@ -89,7 +89,7 @@ const Team = () => {
         </Typography>
       </TeamHeading>
       <TeamMemberSection>
-        <Stack direction="row" spacing={1.5}>
+        <Stack direction="row" spacing={isMobile ? 0.5 : 1.5}>
           <Card>
             <CustomAvatar alt="Mahesh" src={Mahesh} />
             <CardContent>
@@ -277,7 +277,11 @@ const Team = () => {
             </CardContent>
           </Card>
         </Stack>
-        <Stack mt="32px" direction="row" spacing={1.5}>
+        <Stack
+          mt={isMobile ? "9.2px" : "32px"}
+          direction="row"
+          spacing={isMobile ? 0.5 : 1.5}
+        >
           <Card>
             <CustomAvatar alt="Leo" src={Leo} />
             <CardContent>
