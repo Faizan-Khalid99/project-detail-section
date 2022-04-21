@@ -263,7 +263,7 @@ export const theme = createTheme({
           boxShadow: "none",
           [defaultTheme.breakpoints.down("md")]: {
             width: "48.53px",
-            height: "89.15px",
+            height: "80.15px",
           },
         },
       },

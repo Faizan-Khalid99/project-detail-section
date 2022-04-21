@@ -14,16 +14,26 @@ import {
 } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { FONT_WEIGHT } from "../Theme/theme";
+import { ReactComponent as TwitterIcon } from "../Assets/twitterfooter.svg";
+import { ReactComponent as DiscordIcon } from "../Assets/discordfooter.svg";
+import { ReactComponent as FacebookIcon } from "../Assets/facebookFooter.svg";
+import { ReactComponent as InstagramIcon } from "../Assets/instagramfooter.svg";
+import { ReactComponent as LinkedinIcon } from "../Assets/linkedInFooter.svg";
+import { ReactComponent as TelegramIcon } from "../Assets/telegramFooter.svg";
+import { ReactComponent as TiktokIcon } from "../Assets/tiktokIcon.svg";
+import { ReactComponent as YoutubeIcon } from "../Assets/YoutubeIcon.svg";
+import { ReactComponent as MIcon } from "../Assets/M-Footer.svg";
+
 import FooterLogo from "../Assets/FooterLogo.svg";
-import twitterIcon from "../Assets/twitterfooter.svg";
-import discordIcon from "../Assets/discordfooter.svg";
-import facebookIcon from "../Assets/facebookFooter.svg";
-import instagramIcon from "../Assets/instagramfooter.svg";
-import linkedinIcon from "../Assets/linkedInFooter.svg";
-import telegramIcon from "../Assets/telegramFooter.svg";
-import tiktokIcon from "../Assets/tiktokIcon.svg";
-import youtubeIcon from "../Assets/youtubefooter.png";
-import MIcon from "../Assets/M-Footer.svg";
+// import twitterIcon from "../Assets/twitterfooter.svg";
+// import discordIcon from "../Assets/discordfooter.svg";
+// import facebookIcon from "../Assets/facebookFooter.svg";
+// import instagramIcon from "../Assets/instagramfooter.svg";
+// import linkedinIcon from "../Assets/linkedInFooter.svg";
+// import telegramIcon from "../Assets/telegramFooter.svg";
+// import tiktokIcon from "../Assets/tiktokIcon.svg";
+// import youtubeIcon from "../Assets/youtubefooter.png";
+// import MIcon from "../Assets/M-Footer.svg";
 const AppFooter = styled("div")(({ theme }) => ({
   background: theme.palette.dark.footer,
   color: theme.palette.dark.contrastText,
@@ -119,31 +129,31 @@ const Footer = () => {
 
             <Stack direction="row" mt={4} spacing={1.5}>
               <Link href="/">
-                <img src={telegramIcon} alt="telegram" />
+                <TelegramIcon />
               </Link>
               <Link href="/">
-                <img src={twitterIcon} alt="twitter" />
+                <TwitterIcon />
               </Link>
               <Link href="/">
-                <img src={MIcon} alt="M" />
+                <MIcon />
               </Link>
               <Link href="/">
-                <img src={youtubeIcon} alt="youtube" />
+                <YoutubeIcon />
               </Link>
               <Link href="/">
-                <img src={discordIcon} alt="discord" />
+                <DiscordIcon />
               </Link>
               <Link href="/">
-                <img src={instagramIcon} alt="instagram" />
+                <InstagramIcon />
               </Link>
               <Link href="/">
-                <img src={linkedinIcon} alt="linkedin" />
+                <LinkedinIcon />
               </Link>
               <Link href="/">
-                <img src={facebookIcon} alt="fb" />
+                <FacebookIcon />
               </Link>
               <Link href="/">
-                <img src={tiktokIcon} alt="tiktok" />
+                <TiktokIcon />
               </Link>
             </Stack>
           </Grid>

@@ -43,7 +43,7 @@ const TeamMemberSection = styled(Box)({
   marginTop: "32px",
   width: "fit-content",
   [theme.breakpoints.down("sm")]: {
-    width: "345px",
+    padding: "10px",
   },
 });
 const CustomAvatar = styled(Avatar)({
@@ -65,7 +65,7 @@ const Designation = styled(Typography)({
   lineHeight: "15.15px",
   marginTop: "8px",
   [theme.breakpoints.down("md")]: {
-    marginTop: "2px",
+    marginTop: "-10px",
   },
 });
 const Team = () => {
@@ -107,7 +107,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -138,7 +138,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -169,7 +169,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -200,7 +200,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -231,7 +231,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -262,7 +262,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -295,7 +295,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -326,7 +326,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -357,7 +357,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -388,7 +388,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -419,7 +419,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
@@ -450,7 +450,7 @@ const Team = () => {
                 sx={{ display: "flex", justifyContent: "center" }}
                 direction="row"
                 spacing={isMobile ? 1 : 2}
-                mt={isMobile ? 0 : 2}
+                mt={isMobile ? "-8px" : 2}
               >
                 <Link href="">
                   <img src={TwitterCardIcon} alt="twitter" />{" "}
