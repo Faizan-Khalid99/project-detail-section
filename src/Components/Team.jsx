@@ -3,17 +3,12 @@ import {
   Container,
   Typography,
   Button,
-  Box,
-  styled,
   Stack,
   Card,
-  Avatar,
   CardContent,
   Link,
-  createTheme,
   useMediaQuery,
 } from "@mui/material";
-import { colors, FONT_WEIGHT } from "../Theme/theme";
 import TwitterCardIcon from "../Assets/TwitterCardIcon.svg";
 import LinkedInCardIcon from "../Assets/LinkedInCardIcon.svg";
 import FacebookCardIcon from "../Assets/FacebookCardIcon.svg";
@@ -29,45 +24,14 @@ import Gustavo from "../Assets/Gustavo.png";
 import Kianna from "../Assets/Kianna.png";
 import Marilyn from "../Assets/Marilyn.png";
 import Corey from "../Assets/Corey.png";
-const theme = createTheme();
-const ButtonSection = styled(Box)({
-  marginTop: "52px",
-});
-const TeamHeading = styled(Typography)({
-  marginTop: "52px",
-});
-const TeamMemberSection = styled(Box)({
-  backgroundColor: colors.aliceBlue,
-  borderRadius: "20px",
-  padding: "40px",
-  marginTop: "32px",
-  width: "fit-content",
-  [theme.breakpoints.down("sm")]: {
-    padding: "10px",
-  },
-});
-const CustomAvatar = styled(Avatar)({
-  width: "80px",
-  height: "76px",
-  marginTop: "24px",
-  marginLeft: "43px",
-  [theme.breakpoints.down("md")]: {
-    width: "23.39px",
-    height: "22.2px",
-    marginTop: "10px",
-    marginLeft: "12px",
-    marginBottom: "0px",
-  },
-});
-const Designation = styled(Typography)({
-  fontWeight: FONT_WEIGHT.bold,
-  fontSize: "12px",
-  lineHeight: "15.15px",
-  marginTop: "8px",
-  [theme.breakpoints.down("md")]: {
-    marginTop: "-10px",
-  },
-});
+import {
+  theme,
+  ButtonSection,
+  TeamHeading,
+  TeamMemberSection,
+  CustomAvatar,
+  Designation,
+} from "./StyledComponents/TeamStyles";
 const Team = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (

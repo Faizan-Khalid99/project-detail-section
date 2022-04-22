@@ -7,10 +7,7 @@ import {
   Stack,
   Link,
   Button,
-  LinearProgress,
-  styled,
 } from "@mui/material";
-import { FONT_WEIGHT, colors } from "../Theme/theme";
 
 import CeloIcon from "../Assets/CeloIcon.svg";
 import telegramIcon from "../Assets/telegramIcon.svg";
@@ -18,51 +15,14 @@ import TwitterIcon from "../Assets/TwitterIcon.svg";
 import TwitterBookIcon from "../Assets/TwitterBookIcon.svg";
 import webIcon from "../Assets/webIcon.svg";
 import infoIcon from "../Assets/infoIcon.svg";
-const ProgressHeading = styled(Typography)({
-  fontWeight: FONT_WEIGHT.bold,
-  fontSize: "20px",
-  lineHeight: "150%",
-  color: colors.slateGrey,
-});
-
-const RaiseHeading = styled(Typography)({
-  fontWeight: FONT_WEIGHT.bold,
-  fontSize: "20px",
-  lineHeight: "150%",
-  color: colors.slateGrey,
-  marginTop: "27px",
-});
-const LaunchHeading = styled(Typography)({
-  fontWeight: FONT_WEIGHT.bold,
-  fontSize: "20px",
-  lineHeight: "150%",
-  color: colors.slateGrey,
-  marginTop: "24px",
-});
-const RemainingTime = styled(Typography)({
-  fontWeight: FONT_WEIGHT.bold,
-  fontSize: "20px",
-  lineHeight: "112.27%",
-  marginTop: "8px",
-  paddingBottom: "24px",
-  color: colors.swamp,
-});
-const StyledProgressBar = styled(LinearProgress)(({ theme }) => ({
-  width: "100px",
-  height: "8px",
-  borderRadius: "16px",
-  color: theme.palette.primary.main,
-  marginTop: "3px",
-  marginRight: "11px",
-}));
-const ProgressSection = styled(Box)({
-  border: "1px solid rgba(0, 0, 0, 0.1)",
-  width: "184px",
-  height: "270px",
-  borderRadius: "8px",
-  padding: "24px",
-});
-
+import {
+  ProgressSection,
+  ProgressHeading,
+  StyledProgressBar,
+  RaiseHeading,
+  LaunchHeading,
+  RemainingTime,
+} from "./StyledComponents/MainContentStyles";
 const MainContent = () => {
   return (
     <Box mt="40px" sx={{ borderBottom: "1px solid rgba(0, 0, 0, 0.12)" }}>

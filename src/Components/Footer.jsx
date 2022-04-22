@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  styled,
   Typography,
   Grid,
   Container,
@@ -13,7 +12,6 @@ import {
   useTheme,
 } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { FONT_WEIGHT } from "../Theme/theme";
 import { ReactComponent as TwitterIcon } from "../Assets/twitterfooter.svg";
 import { ReactComponent as DiscordIcon } from "../Assets/discordfooter.svg";
 import { ReactComponent as FacebookIcon } from "../Assets/facebookFooter.svg";
@@ -23,48 +21,14 @@ import { ReactComponent as TelegramIcon } from "../Assets/telegramFooter.svg";
 import { ReactComponent as TiktokIcon } from "../Assets/tiktokIcon.svg";
 import { ReactComponent as YoutubeIcon } from "../Assets/YoutubeIcon.svg";
 import { ReactComponent as MIcon } from "../Assets/M-Footer.svg";
-
 import FooterLogo from "../Assets/FooterLogo.svg";
-// import twitterIcon from "../Assets/twitterfooter.svg";
-// import discordIcon from "../Assets/discordfooter.svg";
-// import facebookIcon from "../Assets/facebookFooter.svg";
-// import instagramIcon from "../Assets/instagramfooter.svg";
-// import linkedinIcon from "../Assets/linkedInFooter.svg";
-// import telegramIcon from "../Assets/telegramFooter.svg";
-// import tiktokIcon from "../Assets/tiktokIcon.svg";
-// import youtubeIcon from "../Assets/youtubefooter.png";
-// import MIcon from "../Assets/M-Footer.svg";
-const AppFooter = styled("div")(({ theme }) => ({
-  background: theme.palette.dark.footer,
-  color: theme.palette.dark.contrastText,
-  padding: "61px",
-  paddingBottom: "20px",
-  marginTop: "89px",
-}));
-const FooterHeading = styled(Typography)(({ theme }) => ({
-  color: theme.palette.dark.contrastText,
-  fontWeight: FONT_WEIGHT.bold,
-  fontSize: "1rem",
-  lineHeight: "1.25rem",
-}));
-const CustomLink = styled(Link)({
-  textDecoration: "none",
-  fontWeight: FONT_WEIGHT.regular,
-  color: "#fff",
-  opacity: "0.8",
-  marginBottom: "12px",
-});
-const BorderFooter = styled("div")({
-  border: "1px solid rgba(255,255,255,0.1)",
-  marginTop: "56px",
-  paddingLeft: 0,
-  paddingRight: 0,
-});
-const PageEnd = styled(Typography)(({ theme }) => ({
-  color: theme.palette.dark.contrastText,
-  marginTop: "20px",
-}));
-
+import {
+  AppFooter,
+  FooterHeading,
+  CustomLink,
+  BorderFooter,
+  PageEnd,
+} from "./StyledComponents/AppFooter";
 const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
