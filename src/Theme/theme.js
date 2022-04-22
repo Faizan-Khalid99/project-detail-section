@@ -192,6 +192,13 @@ export const theme = createTheme({
             fontWeight: FONT_WEIGHT.bold,
             lineHeight: "24px",
             borderRadius: "36px",
+            [defaultTheme.breakpoints.down("md")]: {
+              fontSize: "14px",
+            },
+            [defaultTheme.breakpoints.down("sm")]: {
+              fontSize: "12px",
+              lineHeight: "18px",
+            },
           },
         },
       ],
@@ -231,6 +238,13 @@ export const theme = createTheme({
           color: colors.white,
           width: "90px",
           height: "48px",
+          [defaultTheme.breakpoints.down("md")]: {
+            fontSize: "14px",
+          },
+          [defaultTheme.breakpoints.down("sm")]: {
+            fontSize: "12px",
+            lineHeight: "18px",
+          },
         },
         outlinedSecondary: {
           width: "186px",

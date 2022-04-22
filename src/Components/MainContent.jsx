@@ -8,12 +8,11 @@ import {
   Link,
   Button,
 } from "@mui/material";
-
-import CeloIcon from "../Assets/CeloIcon.svg";
-import telegramIcon from "../Assets/telegramIcon.svg";
-import TwitterIcon from "../Assets/TwitterIcon.svg";
-import TwitterBookIcon from "../Assets/TwitterBookIcon.svg";
-import webIcon from "../Assets/webIcon.svg";
+import { ReactComponent as CeloIcon } from "../Assets/CeloIcon.svg";
+import { ReactComponent as TelegramIcon } from "../Assets/telegramIcon.svg";
+import { ReactComponent as TwitterIcon } from "../Assets/TwitterIcon.svg";
+import { ReactComponent as TwitterBookIcon } from "../Assets/TwitterBookIcon.svg";
+import { ReactComponent as WebIcon } from "../Assets/webIcon.svg";
 import infoIcon from "../Assets/infoIcon.svg";
 import {
   ProgressSection,
@@ -35,7 +34,7 @@ const MainContent = () => {
         </Typography>
         <Grid mt="40px" mb="40px" container spacing={6}>
           <Grid item md={1}>
-            <img src={CeloIcon} alt="Celo Icon" />
+            <CeloIcon />
           </Grid>
           <Grid item md={8}>
             <Box ml={3}>
@@ -49,16 +48,16 @@ const MainContent = () => {
               </Typography>
               <Stack mt={3} direction="row" spacing={1}>
                 <Link href="">
-                  <img src={webIcon} alt="web" />{" "}
+                  <WebIcon />
                 </Link>
                 <Link href="">
-                  <img src={telegramIcon} alt="telegramIcon" />{" "}
+                  <TelegramIcon />
                 </Link>
                 <Link href="">
-                  <img src={TwitterIcon} alt="TwitterIcon" />{" "}
+                  <TwitterIcon />
                 </Link>
                 <Link href="">
-                  <img src={TwitterBookIcon} alt="TwitterBook" />{" "}
+                  <TwitterBookIcon />
                 </Link>
               </Stack>
               <Box mt={6.75} sx={{ display: "inline-flex" }}>
